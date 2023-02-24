@@ -84,6 +84,12 @@ I ran a permutation test where I shuffled the gamelength columns and calculated 
 
 A plot of the empirical distribution of simulated statistics as well as the observed mean difference in game length is shown below.
 
-<iframe src="assets/fig.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/fig2.html" width=800 height=600 frameBorder=0></iframe>
 
 As you can see, the simulated statistics (blue) hover between -10 and 10 seconds of average difference in game length, while the observed statistic is -40, which we did not see at all (a zero percent chance). With this visualization, we can determine that the missingness in the 'firstblood' column is in fact MAR, and that it is dependent on the 'gamelength' column.
+
+I was also curious to see if the missingness of the 'firstblood' column depended on the 'champion' column. To gain insight on whether or not it did, I ran another permutation test. I did this by shuffling the champions column and calculating the respective test statistic. Since the champion column contains categorial data, the test statistic I used was the Total Variation Distance (TVD). This statistic calculates the distance between the probability distribution of categorical variables.
+
+A plot of the empirical distribution of simulated TVDs as well as the observed TVDs of champions is shown below.
+
+
