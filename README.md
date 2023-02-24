@@ -20,3 +20,20 @@ League of Legends is a competitive game that many find extremely fun to experien
 
 ## Cleaning and EDA
 
+### Data Cleaning
+
+Before I was able to start investigating what tier 1 league had the most 'action-packed' games, I cleaned the dataset. In this League of Legends dataset in particular, there were many columns that should have been boolean values but were not. Many of the columns contained information on whether or not a player or team secured the 'first' objective in a game, and it was denoted by 1s and 0s. For example, if we took a look at the 'firstblood' column, it determines whether or not that player or team was secured the first kill of the game. The most appropriate value would be boolean values, so that was the first step I did for cleaning.
+
+The cleaning that was arguably more important for answering my question, however, was creating a new column that determined if the league that each game was played in was classified as a tier 1 league, since my question asks about those leagues specifically. I also cleaned the data by removing the rows that pertained to individual players, since I was only interested in the overall action of a game, not an individual's performance. The columns of data I was interested in were columns of team data that were just repeated.
+
+The top few rows of my cleaned dataframe looks like this (with the cleaned columns and columns of interest):
+
+| firstblood   | firstbloodkill   | firstbloodassist   | firstbloodvictim   |   firstdragon |   firstherald |   firstbaron |   firsttower |   firstmidtower |   firsttothreetowers |   ckpm | tier1   |
+|:-------------|:-----------------|:-------------------|:-------------------|--------------:|--------------:|-------------:|-------------:|----------------:|---------------------:|-------:|:--------|
+| False        | False            | False              | False              |           nan |           nan |          nan |          nan |             nan |                  nan | 0.9807 | False   |
+| True         | False            | True               | False              |           nan |           nan |          nan |          nan |             nan |                  nan | 0.9807 | False   |
+| False        | False            | False              | False              |           nan |           nan |          nan |          nan |             nan |                  nan | 0.9807 | False   |
+| True         | False            | True               | False              |           nan |           nan |          nan |          nan |             nan |                  nan | 0.9807 | False   |
+| True         | True             | False              | False              |           nan |           nan |          nan |          nan |             nan |                  nan | 0.9807 | False   |
+
+
