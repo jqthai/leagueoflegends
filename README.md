@@ -92,4 +92,34 @@ I was also curious to see if the missingness of the 'firstblood' column depended
 
 A plot of the empirical distribution of simulated TVDs as well as the observed TVDs of champions is shown below.
 
+<iframe src="assets/champ_tvds2.html" width=800 height=600 frameBorder=0></iframe>
 
+As we can see, all of our simulated TVDs are greater than our observed TVD. Because the randomly simulated TVDs were all equal to or greater than the observed one, we can conclude that the missingness of 'firstblood' is not dependent on the champion since the observed value is seen to not be an extreme value that occurs rarely.
+
+## Hypothesis Testing
+
+Going back to the original question, which is:
+
+Looking at tier-one professional leagues, which league has the most “action-packed” games? Is the amount of “action” in this league significantly different than in other leagues?
+
+We can perform a hypothesis test to answer these questions. We actually only have to answer the second question, since we answered the first one when we aggregated our data! We said that the VCS was the most 'action-packed' league out of all the tier 1 leagues. Since we aggregated using the mean, our test statistic for this test will be the mean 'ckpm'.
+
+Our hypotheses for this test are:
+
+**Null Hypothesis**: The amount of action in the VCS league is not significantly different than the amount of action than in other leagues.
+
+**Alternative Hypothesis**: The amount of action in the VCS league is significantly higher than the amount of action than in other leagues.
+
+Let's conduct our test with a significance level of α (alpha) = 0.05.
+
+I looked at the number of VCS games that were in the dataset and randomly sampled that amount of games' 'ckpm's, and calculated the mean 'ckpm' for every set of samples, and did it repeatedly, comparing them against our observed mean 'ckpm' of the VCS league.
+
+A histogram of the distribution of simulated mean 'ckpm's against the observed mean 'ckpm' of the VCS league is shown below.
+
+<iframe src="assets/hypothesis_test.html" width=800 height=600 frameBorder=0></iframe>
+
+As we can see, none of the simulated statistics come close to being equal or greater than our observed statistic, leaving us with a p-value of 0.0!
+
+Since our observed p value of 0.0 is less than our significance level of 0.05, we reject the null hypothesis that the amount of action in the VCS league is not significantly different than the amount of action in other tier 1 leagues. Our hypothesis test supports that the amount of action in the VCS league is significantly higher than the amount of action in other tier 1 leagues.
+
+After all that rigorous testing, watching some VCS League of Legends sounds like an amazing reward!
