@@ -122,8 +122,6 @@ As we can see, none of the simulated statistics come close to being equal or gre
 
 Since our observed p value of 0.0 is less than our significance level of 0.05, we reject the null hypothesis that the amount of action in the VCS league is not significantly different than the amount of action in other tier 1 leagues. Our hypothesis test supports that the amount of action in the VCS league is significantly higher than the amount of action in other tier 1 leagues.
 
-After all that rigorous testing, watching some VCS League of Legends sounds like an amazing reward!
-
 # Predicting Game Outcomes for Tier 1 Professional League of Legends Teams
 
 ---
